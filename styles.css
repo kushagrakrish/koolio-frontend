@@ -61,12 +61,6 @@ i {
   padding: 4px;
 }
 
-.elevator {
-  width: 250px;
-  height: 200px;
-  background-color: rgb(255, 187, 92);
-  margin: 10px;
-}
 button {
   font-size: 23px;
   outline: none;
@@ -80,4 +74,10 @@ button:focus {
   background-color: green;
   color: white;
   transition: all 0.75ms ease-in-out;
+}
+.elevator {
+  width: 250px;
+  height: 200px;
+  background-color: rgb(255, 187, 92);
+  margin: 10px;
 }
