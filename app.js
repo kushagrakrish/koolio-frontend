@@ -14,12 +14,12 @@ levelOneUpBtn.addEventListener("click", levelOneGoUp);
 levelOneDownBtn.addEventListener("click", levelOneGoDown);
 levelTwoDownBtn.addEventListener("click", levelTwoFoDown);
 
-let currentfloor = 0;
-let nextfloor;
+let groundFloor = 0;
+let nextFloor;
 
 function levelZeroGoUp() {
-  nextfloor = 2;
-  var distance = (currentfloor - nextfloor) * 250 - 3;
+  nextFloor = 2;
+  var distance = (groundFloor - nextFloor) * 250 - 3;
   elevator.style["transition"] = "10s linear";
   elevator.style.transform = "translateY(" + distance + "px)";
   setTimeout(() => {
@@ -28,11 +28,11 @@ function levelZeroGoUp() {
 }
 
 function levelOneGoUp() {
-  if (nextfloor == 0) {
+  if (nextFloor == 0) {
     return;
   }
-  nextfloor = 1;
-  var distance = (currentfloor - nextfloor) * 250;
+  nextFloor = 1;
+  var distance = (groundFloor - nextFloor) * 250;
   elevator.style["transition"] = "5s linear";
   elevator.style.transform = "translateY(" + distance + "px)";
   setTimeout(() => {
@@ -40,8 +40,8 @@ function levelOneGoUp() {
   }, 5000);
 }
 function levelTwoFoDown() {
-  nextfloor = 0;
-  var distance = (currentfloor - nextfloor) * 250;
+  nextFloor = 0;
+  var distance = (groundFloor - nextFloor) * 250;
   elevator.style["transition"] = "10s linear";
   elevator.style.transform = "translateY(" + distance + "px)";
   setTimeout(() => {
@@ -49,11 +49,11 @@ function levelTwoFoDown() {
   }, 10000);
 }
 function levelOneGoDown() {
-  if (nextfloor == 2) {
+  if (nextFloor == 2) {
     return;
   }
-  nextfloor = 1;
-  var distance = (currentfloor - nextfloor) * 250;
+  nextFloor = 1;
+  var distance = (groundFloor - nextFloor) * 250;
   elevator.style["transition"] = "5s linear";
   elevator.style.transform = "translateY(" + distance + "px)";
   setTimeout(() => {
